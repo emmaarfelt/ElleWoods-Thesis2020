@@ -36,8 +36,8 @@ def get_test_cases():
         for no_task_variables in task_variables:
             no_violations_case = ('No violations', 'examples/performance/performance-%d-tasks.bpmn' % no_tasks, 'examples/performance/performance-taskdata-%d-no-violations.xml' % no_task_variables, no_tasks, no_task_variables)
             with_violations_case = ('With violations', 'examples/performance/performance-%d-tasks.bpmn' % no_tasks,
-                                      'examples/performance/performance-taskdata-%d-w-violations.xml' % no_task_variables,
-                                      no_tasks, no_task_variables)
+                                     'examples/performance/performance-taskdata-%d-w-violations.xml' % no_task_variables,
+                                     no_tasks, no_task_variables)
             test.append(no_violations_case)
             test.append(with_violations_case)
     return test

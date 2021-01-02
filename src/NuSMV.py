@@ -162,8 +162,8 @@ def create_smv_file(filename, bpmn):
 
         # Storage limitation
         for v in collect_variables:
-            print('SPEC', file=f)
-            print(indent('AG (COLLECT = %s -> AF DELETE = %s);' % (v, v), 1), file=f)
+            print('LTLSPEC', file=f)
+            print(indent('G (COLLECT = %s -> F DELETE = %s);' % (v, v), 1), file=f)
 
         # Lawful processing
         use_variables = bpmn.variables_library.get_collection('use').values()
@@ -189,10 +189,10 @@ def create_smv_file(filename, bpmn):
 
         if bpmn.variables_library.get_collection('deletion'):
             for v in collect_variables:
-                print('SPEC', file=f)
-                print(indent('AG (DELETION = requested -> AF DELETE = %s);' % (v), 1), file=f)
-            print('SPEC', file=f)
-            print(indent('AG (DELETION = requested -> AF DELETION = done);', 1), file=f)
+                print('LTLSPEC', file=f)
+                print(indent('G (DELETION = requested -> F DELETE = %s);' % (v), 1), file=f)
+            print('LTLSPEC', file=f)
+            print(indent('G (DELETION = requested -> F DELETION = done);', 1), file=f)
 
             share_variables = bpmn.variables_library.get_collection('share').values()
             for v in share_variables:
@@ -213,13 +213,13 @@ def create_smv_file(filename, bpmn):
 
         # Right to access
         if bpmn.variables_library.get_collection('access'):
-            print('SPEC', file=f)
-            print(indent('AG (ACCESS = requested -> AF ACCESS = granted);', 1), file=f)
+            print('LTLSPEC', file=f)
+            print(indent('G (ACCESS = requested -> F ACCESS = granted);', 1), file=f)
 
         # Notification of Data Breach
         if bpmn.variables_library.get_collection('breach'):
-            print('SPEC', file=f)
-            print(indent('AG (BREACH = TRUE -> EF NOTIFICATION = sa & EF NOTIFICATION = ds );', 1), file=f)
+            print('LTLSPEC', file=f)
+            print(indent('G (BREACH = TRUE -> F NOTIFICATION = sa & F NOTIFICATION = ds );', 1), file=f)
 
         # General principles for transfers
         if bpmn.variables_library.get_collection('transfer'):
