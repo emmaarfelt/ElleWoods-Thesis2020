@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPoints>
+	<TaskLabel id="StartEvent_0bh8v91" name="Legal Advice requested" type="inform">
+		<Entry>Contact Person</Entry>
+		<Entry>Customer</Entry>
+		<Entry>Employee</Entry>
+		<Entry>Hours</Entry>
+	</TaskLabel>
+	<TaskData id="Activity_1u9n21f" name="determine billable hours">
+		<Entry>Contact Person</Entry>
+		<Entry>Customer</Entry>
+		<Entry>Employee</Entry>
+		<Entry>Hours</Entry>
+	</TaskData>
+	<TaskLabel id="Event_166nb7u" name="Invoice settled" type="delete">
+		<Entry>Customer Information</Entry>
+	</TaskLabel>
+	<TaskLabel id="StartEvent_0bh8v91" name="Legal Advice requested" type="consent">
+		<Entry>Customer Information</Entry>
+	</TaskLabel>
+	<DataStore id="DataStoreReference_1i7fxm5" name="Customer Time Sheet">
+		<Entry>Contact Person</Entry>
+		<Entry>Customer Information</Entry>
+		<Entry>Employee</Entry>
+		<Entry>Hours</Entry>
+	</DataStore>
+</DataPoints>

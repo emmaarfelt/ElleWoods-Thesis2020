@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="DataPoints">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TaskData" type="tTaskData" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element name="TaskLabel" type="tTaskLabel" maxOccurs="unbounded" minOccurs="0"/>
+        <xs:element name="DataStore" type="tDataStore" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+<xs:complexType name="tTaskData">
+  <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="Entry"/>
+  </xs:sequence>
+  <xs:attribute name="id" use="required" type="xs:string"/>
+  <xs:attribute name="name" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="tTaskLabel">
+  <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="Entry"/>
+  </xs:sequence>
+  <xs:attribute name="id" use="required" type="xs:string"/>
+  <xs:attribute name="name" use="required"/>
+  <xs:attribute name="type" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="tDataStore">
+  <xs:sequence>
+    <xs:element maxOccurs="unbounded" ref="Entry"/>
+  </xs:sequence>
+  <xs:attribute name="id" use="required" type="xs:string"/>
+  <xs:attribute name="name" use="required" type="xs:string"/>
+</xs:complexType>
+
+<xs:element name="Entry" type="xs:string"/>
+
+</xs:schema>

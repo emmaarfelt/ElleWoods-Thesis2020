@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPoints>
+  <TaskData id="Task_0hfs7te" name="Task D&#10;">
+    <Entry>Name</Entry>
+    <Entry>Address</Entry>
+    <Entry>Telephone</Entry>
+    <Entry>Email</Entry>
+  </TaskData>
+  <DataStore id="DataStoreReference_05h4qc3" name="UserDB">
+    <Entry>Name</Entry>
+    <Entry>Address</Entry>
+    <Entry>Telephone</Entry>
+    <Entry>Email</Entry>
+  </DataStore>
+</DataPoints>

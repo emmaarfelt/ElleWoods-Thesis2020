@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" id="_1276276944297" targetNamespace="http://www.trisotech.com/definitions/_1276276944297" exporter="bpmn-js (https://demo.bpmn.io)" exporterVersion="5.1.2">
+  <bpmn:dataStore id="DS6-53" name="Completed Nomination Forms" capacity="0" isUnlimited="false" />
+  <bpmn:dataStore id="DS6-399" name="Preliminary Candidates" capacity="0" isUnlimited="false" />
+  <bpmn:dataStore id="DS6-486" name="Candidates Assessments" capacity="0" isUnlimited="false" />
+  <bpmn:dataStore id="DS6-1235" name="Nominators" capacity="0" isUnlimited="false" />
+  <bpmn:message id="_1276276944828" />
+  <bpmn:message id="_1276276945375" />
+  <bpmn:message id="_1276276945844" />
+  <bpmn:message id="_1276276946047" />
+  <bpmn:message id="_1276276946938" />
+  <bpmn:process id="WFP-6-1" isExecutable="false">
+    <bpmn:startEvent id="_6-84" name="September Year  n-1">
+      <bpmn:outgoing>_6-148</bpmn:outgoing>
+      <bpmn:timerEventDefinition>
+        <bpmn:timeDate />
+      </bpmn:timerEventDefinition>
+    </bpmn:startEvent>
+    <bpmn:task id="_6-97" name="Send Nomination Form" implementation="##WebService" messageRef="_1276276944828">
+      <bpmn:incoming>_6-148</bpmn:incoming>
+      <bpmn:outgoing>_6-881</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput id="Din1276276949693" />
+        <bpmn:inputSet>
+          <bpmn:dataInputRefs>Din1276276949693</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+      <bpmn:property id="Property_01xw725" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="_6-1242">
+        <bpmn:sourceRef>_6-1235</bpmn:sourceRef>
+        <bpmn:targetRef>Property_01xw725</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:multiInstanceLoopCharacteristics />
+    </bpmn:task>
+    <bpmn:task id="_6-346" name="Collect Completed Forms" implementation="##WebService" messageRef="_1276276945375">
+      <bpmn:incoming>_6-881</bpmn:incoming>
+      <bpmn:outgoing>_6-921</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataOutput id="Dout1276276949625" />
+        <bpmn:inputSet />
+        <bpmn:outputSet>
+          <bpmn:dataOutputRefs>Dout1276276949625</bpmn:dataOutputRefs>
+        </bpmn:outputSet>
+      </bpmn:ioSpecification>
+      <bpmn:dataOutputAssociation id="_6-406">
+        <bpmn:sourceRef>Dout1276276949625</bpmn:sourceRef>
+        <bpmn:targetRef>_6-53</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+      <bpmn:standardLoopCharacteristics />
+    </bpmn:task>
+    <bpmn:task id="_6-429" name="Screen &#38; Select Preliminary Candidates" implementation="##unspecified">
+      <bpmn:incoming>_6-921</bpmn:incoming>
+      <bpmn:outgoing>_6-943</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput id="Din1276276949688" />
+        <bpmn:dataOutput id="Dout1276276949689" />
+        <bpmn:inputSet>
+          <bpmn:dataInputRefs>Din1276276949688</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet>
+          <bpmn:dataOutputRefs>Dout1276276949689</bpmn:dataOutputRefs>
+        </bpmn:outputSet>
+      </bpmn:ioSpecification>
+      <bpmn:property id="Property_1lmusv1" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="_6-484">
+        <bpmn:sourceRef>_6-53</bpmn:sourceRef>
+        <bpmn:targetRef>Property_1lmusv1</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:dataOutputAssociation id="_6-493">
+        <bpmn:sourceRef>Dout1276276949689</bpmn:sourceRef>
+        <bpmn:targetRef>_6-399</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+    </bpmn:task>
+    <bpmn:task id="_6-495" name="Send List of Selected Preliminary Candidates" implementation="##WebService" messageRef="_1276276945844">
+      <bpmn:incoming>_6-961</bpmn:incoming>
+      <bpmn:outgoing>_6-1023</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput id="Din1276276949690" />
+        <bpmn:inputSet>
+          <bpmn:dataInputRefs>Din1276276949690</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+      <bpmn:property id="Property_1o19cc0" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="_6-546">
+        <bpmn:sourceRef>_6-399</bpmn:sourceRef>
+        <bpmn:targetRef>Property_1o19cc0</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+      <bpmn:multiInstanceLoopCharacteristics />
+    </bpmn:task>
+    <bpmn:task id="_6-695" name="Collect Candidates Work Assessment Reports" implementation="##WebService" messageRef="_1276276946047">
+      <bpmn:incoming>_6-1023</bpmn:incoming>
+      <bpmn:outgoing>_6-331</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataOutput id="Dout1276276949691" />
+        <bpmn:inputSet />
+        <bpmn:outputSet>
+          <bpmn:dataOutputRefs>Dout1276276949691</bpmn:dataOutputRefs>
+        </bpmn:outputSet>
+      </bpmn:ioSpecification>
+      <bpmn:dataOutputAssociation id="_6-757">
+        <bpmn:sourceRef>Dout1276276949691</bpmn:sourceRef>
+        <bpmn:targetRef>_6-486</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+      <bpmn:standardLoopCharacteristics />
+    </bpmn:task>
+    <bpmn:exclusiveGateway id="_6-675" name="Expert Assistance Required?">
+      <bpmn:incoming>_6-1153</bpmn:incoming>
+      <bpmn:outgoing>_6-961</bpmn:outgoing>
+      <bpmn:outgoing>_6-1037</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:task id="_6-1102" name="Determine Need for Expert Assistance" implementation="##unspecified">
+      <bpmn:incoming>_6-943</bpmn:incoming>
+      <bpmn:outgoing>_6-1153</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="_6-176" name="Write Recommendations Report">
+      <bpmn:incoming>_6-1037</bpmn:incoming>
+      <bpmn:incoming>_6-1295</bpmn:incoming>
+      <bpmn:outgoing>_6-815</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataOutput id="Dout1276276949626" />
+        <bpmn:inputSet />
+        <bpmn:outputSet>
+          <bpmn:dataOutputRefs>Dout1276276949626</bpmn:dataOutputRefs>
+        </bpmn:outputSet>
+      </bpmn:ioSpecification>
+      <bpmn:dataOutputAssociation id="_6-413">
+        <bpmn:sourceRef>Dout1276276949626</bpmn:sourceRef>
+        <bpmn:targetRef>_6-337</bpmn:targetRef>
+      </bpmn:dataOutputAssociation>
+    </bpmn:task>
+    <bpmn:task id="_6-669" name="Submit Report with Recommendations" implementation="##WebService" messageRef="_1276276946938">
+      <bpmn:incoming>_6-815</bpmn:incoming>
+      <bpmn:outgoing>_6-333</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput id="Din1276276949692" />
+        <bpmn:inputSet>
+          <bpmn:dataInputRefs>Din1276276949692</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+      <bpmn:property id="Property_0pdmbkq" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="_6-818">
+        <bpmn:sourceRef>_6-337</bpmn:sourceRef>
+        <bpmn:targetRef>Property_0pdmbkq</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+    </bpmn:task>
+    <bpmn:task id="_6-414" name="Hold Nobel Prize Award Ceremony" implementation="##unspecified">
+      <bpmn:incoming>_6-333</bpmn:incoming>
+      <bpmn:outgoing>_6-335</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="_6-801" name="">
+      <bpmn:incoming>_6-335</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:task id="_6-1244" name="Select Final Candidates and their works" implementation="##unspecified">
+      <bpmn:incoming>_6-331</bpmn:incoming>
+      <bpmn:outgoing>_6-1295</bpmn:outgoing>
+      <bpmn:ioSpecification>
+        <bpmn:dataInput id="Din1276276949694" />
+        <bpmn:inputSet>
+          <bpmn:dataInputRefs>Din1276276949694</bpmn:dataInputRefs>
+        </bpmn:inputSet>
+        <bpmn:outputSet />
+      </bpmn:ioSpecification>
+      <bpmn:property id="Property_02a806b" name="__targetRef_placeholder" />
+      <bpmn:dataInputAssociation id="_6-1297">
+        <bpmn:sourceRef>_6-486</bpmn:sourceRef>
+        <bpmn:targetRef>Property_02a806b</bpmn:targetRef>
+      </bpmn:dataInputAssociation>
+    </bpmn:task>
+    <bpmn:dataStoreReference id="_6-337" name="Report with Recommendations" dataObjectRef="DO1276276949391" />
+    <bpmn:dataObject id="DO1276276949391" name="Report with Recommendations" />
+    <bpmn:dataStoreReference id="_6-53" name="Completed Nomination Forms" dataStoreRef="DS6-53" />
+    <bpmn:dataStoreReference id="_6-399" name="Preliminary Candidates" dataStoreRef="DS6-399" />
+    <bpmn:dataStoreReference id="_6-486" name="Candidates Assessments" dataStoreRef="DS6-486" />
+    <bpmn:dataStoreReference id="_6-1235" name="Nominators" dataStoreRef="DS6-1235" />
+    <bpmn:sequenceFlow id="_6-1295" name="" sourceRef="_6-1244" targetRef="_6-176" />
+    <bpmn:sequenceFlow id="_6-1153" name="" sourceRef="_6-1102" targetRef="_6-675" />
+    <bpmn:sequenceFlow id="_6-1037" name="No" sourceRef="_6-675" targetRef="_6-176" />
+    <bpmn:sequenceFlow id="_6-1023" name="" sourceRef="_6-495" targetRef="_6-695" />
+    <bpmn:sequenceFlow id="_6-961" name="Yes" sourceRef="_6-675" targetRef="_6-495" />
+    <bpmn:sequenceFlow id="_6-943" name="" sourceRef="_6-429" targetRef="_6-1102" />
+    <bpmn:sequenceFlow id="_6-921" name="" sourceRef="_6-346" targetRef="_6-429" />
+    <bpmn:sequenceFlow id="_6-881" name="" sourceRef="_6-97" targetRef="_6-346" />
+    <bpmn:sequenceFlow id="_6-815" name="" sourceRef="_6-176" targetRef="_6-669" />
+    <bpmn:sequenceFlow id="_6-335" name="" sourceRef="_6-414" targetRef="_6-801" />
+    <bpmn:sequenceFlow id="_6-333" name="" sourceRef="_6-669" targetRef="_6-414" />
+    <bpmn:sequenceFlow id="_6-331" name="" sourceRef="_6-695" targetRef="_6-1244" />
+    <bpmn:sequenceFlow id="_6-148" name="" sourceRef="_6-84" targetRef="_6-97" />
+    <bpmn:textAnnotation id="_6-821">
+      <bpmn:text>Around 3000 invitations/confidential nomination forms are sent to selected Nominators</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:association id="_6-824" associationDirection="None" sourceRef="_6-821" targetRef="_6-97" />
+  </bpmn:process>
+  <bpmn:message id="_1276276947250" />
+  <bpmn:message id="_1276276945078" />
+  <bpmn:message id="_1276276945313" />
+  <bpmn:message id="_1276276945110" />
+  <bpmn:message id="_1276276945938" />
+  <bpmn:collaboration id="C1276276949828">
+    <bpmn:participant id="_6-60" name="Nobel Committee for Medicine" processRef="WFP-6-1" />
+  </bpmn:collaboration>
+  <bpmndi:BPMNDiagram id="Trisotech.Visio-_6" name="Collaboration Diagram of the Nobel Prize Process" documentation="" resolution="96.00000267028808">
+    <bpmndi:BPMNPlane bpmnElement="C1276276949828">
+      <bpmndi:BPMNShape id="Trisotech.Visio__6-60" bpmnElement="_6-60" isHorizontal="true">
+        <dc:Bounds x="155" y="82" width="1295" height="323" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-84" bpmnElement="_6-84">
+        <dc:Bounds x="190" y="195" width="30" height="30" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="165" y="225" width="80" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-97" bpmnElement="_6-97">
+        <dc:Bounds x="239" y="177" width="83" height="68" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-346" bpmnElement="_6-346">
+        <dc:Bounds x="343" y="175" width="87" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-429" bpmnElement="_6-429">
+        <dc:Bounds x="456" y="174" width="93" height="72" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-495" bpmnElement="_6-495">
+        <dc:Bounds x="737" y="170" width="82" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-695" bpmnElement="_6-695">
+        <dc:Bounds x="843" y="171" width="98" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-675" bpmnElement="_6-675" isMarkerVisible="true">
+        <dc:Bounds x="673" y="190" width="42" height="42" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="667" y="232" width="54" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-1102" bpmnElement="_6-1102">
+        <dc:Bounds x="568" y="177" width="83" height="68" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-176" bpmnElement="_6-176" isExpanded="false">
+        <dc:Bounds x="1066" y="177" width="95" height="68" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-669" bpmnElement="_6-669">
+        <dc:Bounds x="1180" y="177" width="96" height="67" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-414" bpmnElement="_6-414">
+        <dc:Bounds x="1297" y="174" width="89" height="73" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-801" bpmnElement="_6-801">
+        <dc:Bounds x="1410" y="195" width="32" height="32" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-1244" bpmnElement="_6-1244">
+        <dc:Bounds x="962" y="177" width="83" height="68" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-337" bpmnElement="_6-337">
+        <dc:Bounds x="1174" y="123" width="30" height="38" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1146" y="161" width="87" height="40" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-53" bpmnElement="_6-53">
+        <dc:Bounds x="434" y="289" width="32" height="27" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="405" y="316" width="90" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-399" bpmnElement="_6-399">
+        <dc:Bounds x="626" y="298" width="32" height="27" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="614" y="325" width="56" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-486" bpmnElement="_6-486">
+        <dc:Bounds x="950" y="293" width="32" height="27" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="933" y="320" width="66" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-1235" bpmnElement="_6-1235">
+        <dc:Bounds x="210" y="309" width="32" height="27" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="198" y="336" width="57" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Trisotech.Visio__6__6-821" bpmnElement="_6-821">
+        <dc:Bounds x="190" y="93" width="164" height="49" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-921" bpmnElement="_6-921">
+        <di:waypoint x="430" y="211" />
+        <di:waypoint x="444" y="211" />
+        <di:waypoint x="456" y="211" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-546" bpmnElement="_6-546">
+        <di:waypoint x="658" y="311" />
+        <di:waypoint x="753" y="311" />
+        <di:waypoint x="753" y="251" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-148" bpmnElement="_6-148">
+        <di:waypoint x="220" y="211" />
+        <di:waypoint x="224" y="211" />
+        <di:waypoint x="239" y="211" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-818" bpmnElement="_6-818">
+        <di:waypoint x="1204" y="142" />
+        <di:waypoint x="1228" y="142" />
+        <di:waypoint x="1228" y="177" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-1242" bpmnElement="_6-1242">
+        <di:waypoint x="242" y="322" />
+        <di:waypoint x="256" y="322" />
+        <di:waypoint x="255" y="245" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-815" bpmnElement="_6-815">
+        <di:waypoint x="1161" y="211" />
+        <di:waypoint x="1165" y="211" />
+        <di:waypoint x="1180" y="211" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-757" bpmnElement="_6-757">
+        <di:waypoint x="921" y="251" />
+        <di:waypoint x="921" y="307" />
+        <di:waypoint x="950" y="306" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-335" bpmnElement="_6-335">
+        <di:waypoint x="1387" y="211" />
+        <di:waypoint x="1392" y="211" />
+        <di:waypoint x="1410" y="211" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-484" bpmnElement="_6-484">
+        <di:waypoint x="466" y="302" />
+        <di:waypoint x="486" y="302" />
+        <di:waypoint x="487" y="247" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-961" bpmnElement="_6-961">
+        <di:waypoint x="715" y="211" />
+        <di:waypoint x="737" y="211" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="717" y="186" width="18" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-493" bpmnElement="_6-493">
+        <di:waypoint x="530" y="247" />
+        <di:waypoint x="530" y="312" />
+        <di:waypoint x="626" y="311" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-1153" bpmnElement="_6-1153">
+        <di:waypoint x="652" y="211" />
+        <di:waypoint x="657" y="211" />
+        <di:waypoint x="673" y="211" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-824" bpmnElement="_6-824">
+        <di:waypoint x="203" y="142" />
+        <di:waypoint x="203" y="160" />
+        <di:waypoint x="256" y="160" />
+        <di:waypoint x="255" y="177" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-406" bpmnElement="_6-406">
+        <di:waypoint x="413" y="246" />
+        <di:waypoint x="413" y="302" />
+        <di:waypoint x="434" y="302" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-1297" bpmnElement="_6-1297">
+        <di:waypoint x="982" y="306" />
+        <di:waypoint x="1004" y="306" />
+        <di:waypoint x="1004" y="245" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-333" bpmnElement="_6-333">
+        <di:waypoint x="1276" y="211" />
+        <di:waypoint x="1281" y="211" />
+        <di:waypoint x="1297" y="211" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-1295" bpmnElement="_6-1295">
+        <di:waypoint x="1046" y="211" />
+        <di:waypoint x="1057" y="211" />
+        <di:waypoint x="1066" y="211" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-331" bpmnElement="_6-331">
+        <di:waypoint x="940" y="211" />
+        <di:waypoint x="945" y="211" />
+        <di:waypoint x="962" y="211" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-413" bpmnElement="_6-413">
+        <di:waypoint x="1142" y="177" />
+        <di:waypoint x="1142" y="142" />
+        <di:waypoint x="1174" y="142" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-1037" bpmnElement="_6-1037">
+        <di:waypoint x="694" y="190" />
+        <di:waypoint x="694" y="123" />
+        <di:waypoint x="1114" y="123" />
+        <di:waypoint x="1114" y="177" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="897" y="98" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-881" bpmnElement="_6-881">
+        <di:waypoint x="322" y="211" />
+        <di:waypoint x="343" y="211" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-1023" bpmnElement="_6-1023">
+        <di:waypoint x="819" y="211" />
+        <di:waypoint x="824" y="211" />
+        <di:waypoint x="843" y="211" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Trisotech.Visio__6__6-943" bpmnElement="_6-943">
+        <di:waypoint x="548" y="211" />
+        <di:waypoint x="559" y="211" />
+        <di:waypoint x="568" y="211" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPoints>
+    <TaskLabel id="_6-84" name="September Year n-1" type="legal_grounds">
+    <Entry>Forms</Entry>
+    <Entry>Nominator</Entry>
+    <Entry>Candidate Name</Entry>
+    <Entry>Candidate Work</Entry>
+    <Entry>Assessments</Entry>
+    <Entry>Recommendations</Entry>
+  </TaskLabel>
+  <TaskLabel id="_6-414" name="Hold Nobel Prize Ceremony" type="delete">
+    <Entry>Forms</Entry>
+    <Entry>Nominator</Entry>
+    <Entry>Candidate Name</Entry>
+    <Entry>Candidate Work</Entry>
+    <Entry>Assessments</Entry>
+    <Entry>Recommendations</Entry>
+  </TaskLabel>
+  <TaskData id="_6-429" name="Screen &#38; Select Preliminary Candidates">
+    <Entry>Forms</Entry>
+  </TaskData>
+  <TaskData id="_6-97" name="Send Nomination Form">
+    <Entry>Nominator</Entry>
+  </TaskData>
+  <TaskData id="_6-495" name="Send List of Selected Preliminary Candidates">
+    <Entry>Candidate Name</Entry>
+    <Entry>Candidate Work</Entry>
+  </TaskData>
+  <TaskLabel id="_6-495" name="Send List of Selected Preliminary Candidates" type="share">
+    <Entry>Candidate Name</Entry>
+    <Entry>Candidate Work</Entry>
+  </TaskLabel>
+  <TaskData id="_6-1244" name="Select Final Candidates and their works">
+    <Entry>Assessments</Entry>
+  </TaskData>
+  <TaskLabel id="_6-669" name="Submit Report with Recommendations" type="share">
+    <Entry>Recommendations</Entry>
+  </TaskLabel>
+  <TaskData id="_6-917" name="Discuss Nominations (Meeting 1)">
+    <Entry>Recommendations</Entry>
+  </TaskData>
+  <DataStore id="_6-53" name="Completed Nomination Forms">
+    <Entry>Forms</Entry>
+  </DataStore>
+  <DataStore id="_6-399" name="Preliminary Candidates">
+    <Entry>Candidate Name</Entry>
+    <Entry>Candidate Work</Entry>
+  </DataStore>
+  <DataStore id="_6-486" name="Candidates Assessments">
+    <Entry>Assessments</Entry>
+  </DataStore>
+  <DataStore id="_6-1235" name="Nominators">
+    <Entry>Nominator</Entry>
+  </DataStore>
+  <DataStore id="_6-337" name="Report with Recommendations">
+    <Entry>Recommendations</Entry>
+  </DataStore>
+  
+</DataPoints>

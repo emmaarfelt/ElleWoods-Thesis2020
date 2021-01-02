@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPoints>
+	<TaskData id="Task_0032ixd" name="Deliver the pizza">
+		<Entry>Name</Entry>
+		<Entry>Address</Entry>
+		<Entry>Telephone</Entry>
+	</TaskData>
+	<DataStore id="DataStoreReference_1i8nkn7" name="Orders">
+		<Entry>Name</Entry>
+		<Entry>Address</Entry>
+		<Entry>Telephone</Entry>
+	</DataStore>
+</DataPoints>

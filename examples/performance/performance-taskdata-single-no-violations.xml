@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPoints>
+	<TaskLabel id="Activity_0d4y0oa" name="1" type="consent">
+        <Entry>x</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_1r7j64v" name="12" type="consent">
+        <Entry>y</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_0r3tq0f" name="13" type="consent">
+        <Entry>z</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_16jx0cg" name="14" type="consent">
+        <Entry>i</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_124aqe7" name="15" type="consent">
+        <Entry>j</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_035kuc1" name="16" type="consent">
+        <Entry>x</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_0o27480" name="126" type="consent">
+        <Entry>y</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_05kow7d" name="136" type="consent">
+        <Entry>z</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_0hb46qd" name="146" type="consent">
+        <Entry>i</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_00gc4ag" name="156" type="consent">
+        <Entry>j</Entry>
+	</TaskLabel>
+	<TaskData id="Activity_02dgya0" name="4">
+        <Entry>x</Entry>
+	</TaskData>
+	<TaskData id="Activity_00ie7fw" name="42">
+        <Entry>y</Entry>
+	</TaskData>
+	<TaskData id="Activity_07v7sxw" name="43">
+        <Entry>z</Entry>
+	</TaskData>
+	<TaskData id="Activity_0w8kn7g" name="44">
+        <Entry>i</Entry>
+	</TaskData>
+	<TaskData id="Activity_08v4cge" name="45">
+        <Entry>j</Entry>
+	</TaskData>
+	<TaskData id="Activity_16mnwmn" name="46">
+        <Entry>x</Entry>
+	</TaskData>
+	<TaskData id="Activity_004xk0k" name="426">
+        <Entry>y</Entry>
+	</TaskData>
+	<TaskData id="Activity_0gujj45" name="436">
+        <Entry>z</Entry>
+	</TaskData>
+	<TaskData id="Activity_03hjxux" name="446">
+        <Entry>i</Entry>
+	</TaskData>
+	<TaskData id="Activity_0t7hh65" name="456">
+        <Entry>j</Entry>
+	</TaskData>
+	<DataStore id="DataStoreReference_166q3ln" name="DB">
+        <Entry>x</Entry>
+	</DataStore>
+	<DataStore id="DataStoreReference_1atwdim" name="DB2">
+        <Entry>y</Entry>
+	</DataStore>
+	<DataStore id="DataStoreReference_059bxf2" name="DB3">
+        <Entry>z</Entry>
+	</DataStore>
+	<DataStore id="DataStoreReference_1enw6y1" name="DB4">
+        <Entry>i</Entry>
+	</DataStore>
+	<DataStore id="DataStoreReference_0vuhty6" name="DB5">
+        <Entry>j</Entry>
+	</DataStore>
+	<DataStore id="DataStoreReference_0kdsjz3" name="DB6">
+        <Entry>x</Entry>
+	</DataStore>
+	<DataStore id="DataStoreReference_1y79iqa" name="DB26">
+        <Entry>y</Entry>
+	</DataStore>
+	<DataStore id="DataStoreReference_0cm04if" name="DB36">
+        <Entry>z</Entry>
+	</DataStore>
+	<DataStore id="DataStoreReference_1vaeth7" name="DB46">
+        <Entry>i</Entry>
+	</DataStore>
+	<DataStore id="DataStoreReference_04fd5u8" name="DB56">
+        <Entry>j</Entry>
+	</DataStore>
+    <TaskLabel id="Event_0ksfvsx" name="7" type="legal_grounds">
+        <Entry>x</Entry>
+	</TaskLabel>
+	<TaskLabel id="Event_134s0v9" name="72" type="legal_grounds">
+        <Entry>y</Entry>
+	</TaskLabel>
+	<TaskLabel id="Event_1ak8a03" name="73" type="legal_grounds">
+        <Entry>z</Entry>
+	</TaskLabel>
+	<TaskLabel id="Event_1nlienz" name="74" type="legal_grounds">
+        <Entry>i</Entry>
+	</TaskLabel>
+	<TaskLabel id="Event_0dq244a" name="75" type="legal_grounds">
+        <Entry>j</Entry>
+	</TaskLabel>
+	<TaskLabel id="Event_1b5er5t" name="76" type="legal_grounds">
+        <Entry>x</Entry>
+	</TaskLabel>
+	<TaskLabel id="Event_1kd8or5" name="726" type="legal_grounds">
+        <Entry>y</Entry>
+	</TaskLabel>
+	<TaskLabel id="Event_1nasi92" name="736" type="legal_grounds">
+        <Entry>z</Entry>
+	</TaskLabel>
+	<TaskLabel id="Event_1l2359s" name="746" type="legal_grounds">
+        <Entry>i</Entry>
+	</TaskLabel>
+	<TaskLabel id="Event_0ghv0pf" name="756" type="legal_grounds">
+        <Entry>j</Entry>
+	</TaskLabel>
+    <TaskLabel id="Event_0vak976" name="9" type="revoke">
+        <Entry>x</Entry>
+	</TaskLabel>
+	  <TaskLabel id="Event_191gld0" name="92" type="revoke">
+        <Entry>y</Entry>
+	</TaskLabel>
+	  <TaskLabel id="Event_1rblrgh" name="93" type="revoke">
+        <Entry>z</Entry>
+	</TaskLabel>
+	  <TaskLabel id="Event_0sqk7q1" name="94" type="revoke">
+        <Entry>i</Entry>
+	</TaskLabel>
+	  <TaskLabel id="Event_0yinuox" name="95" type="revoke">
+        <Entry>j</Entry>
+	</TaskLabel>
+	 <TaskLabel id="Event_1mgr385" name="96" type="revoke">
+        <Entry>x</Entry>
+	</TaskLabel>
+	  <TaskLabel id="Event_0g67bjt" name="926" type="revoke">
+        <Entry>y</Entry>
+	</TaskLabel>
+	  <TaskLabel id="Event_1l8lall" name="936" type="revoke">
+        <Entry>z</Entry>
+	</TaskLabel>
+	  <TaskLabel id="Event_13sq67u" name="946" type="revoke">
+        <Entry>i</Entry>
+	</TaskLabel>
+	  <TaskLabel id="Event_0qjists" name="956" type="revoke">
+        <Entry>j</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_13v7266" name="10" type="delete">
+        <Entry>x</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_0ncg445" name="102" type="delete">
+        <Entry>y</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_1xs2itu" name="103" type="delete">
+        <Entry>z</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_1ncvxql" name="104" type="delete">
+        <Entry>i</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_17p6blz" name="105" type="delete">
+        <Entry>j</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_0lw4qv6" name="106" type="delete">
+        <Entry>x</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_1hymf6y" name="1026" type="delete">
+        <Entry>y</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_0mt2l1l" name="1036" type="delete">
+        <Entry>z</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_06aqesn" name="1046" type="delete">
+        <Entry>i</Entry>
+	</TaskLabel>
+	<TaskLabel id="Activity_1l9w57q" name="1056" type="delete">
+        <Entry>j</Entry>
+	</TaskLabel>
+</DataPoints>

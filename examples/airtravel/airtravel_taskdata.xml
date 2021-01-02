@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPoints>
+	<TaskData id="Task_1ma6pyy" name="Get emergency contact&#10;">
+		<Entry>Emergency contact</Entry>
+	</TaskData>
+	<TaskData id="Task_0mhfw7z" name="Process Booking&#10;">
+		<Entry>Name</Entry>
+		<Entry>Address</Entry>
+		<Entry>Telephone</Entry>
+		<Entry>Email</Entry>
+	</TaskData>
+	<TaskLabel id="IntermediateThrowEvent_0blvvca" name="Receive Booking&#10;" type="consent">
+		<Entry>Name</Entry>
+		<Entry>Address</Entry>
+		<Entry>Telephone</Entry>
+		<Entry>Email</Entry>
+		<Entry>Emergency Contact</Entry>
+	</TaskLabel>
+	<TaskLabel id="ExclusiveGateway_0rn2yaq" name="Completed Flight&#10;" type="delete">
+		<Entry>Emergency Contact</Entry>
+	</TaskLabel>
+	<DataStore id="DataStoreReference_0l7i8ue" name="Bookings">
+		<Entry>Name</Entry>
+		<Entry>Address</Entry>
+		<Entry>Telephone</Entry>
+		<Entry>Email</Entry>
+		<Entry>Emergency Contact</Entry>
+	</DataStore>
+</DataPoints>

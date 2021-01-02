@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataPoints>
+    <DataStore id="DataStoreReference_1j0ji0e" name="Credit Storage">
+        <Entry>Credit Card Information</Entry>
+    </DataStore>
+    <DataStore id="DataStoreReference_0vg553p" name="Orders">
+        <Entry>Customer Address</Entry>
+		<Entry>Customer Name</Entry>
+        <Entry>Customer Telephone</Entry>
+        <Entry>Customer Email</Entry>
+        <Entry>Order details</Entry>
+    </DataStore>
+	<TaskData id="Event_0gnbb00" name="Receive order">
+		<Entry>Customer Address</Entry>
+		<Entry>Customer Name</Entry>
+        <Entry>Customer Telephone</Entry>
+        <Entry>Customer Email</Entry>
+    </TaskData>
+    <TaskLabel id="Event_0gnbb00" name="Receive order" type="legal_grounds">
+        <Entry>Order details</Entry>
+    </TaskLabel>
+    <TaskData id="__f4846d41-bca9-4788-9ce2-30ff4b9d6b7b" name="Pick items">
+        <Entry>Order details</Entry>
+    </TaskData>
+	<TaskLabel id="Activity_18j5fkp" name="Fill out credit card information" type="consent">
+		<Entry>Customer Address</Entry>
+		<Entry>Customer Name</Entry>
+		<Entry>Customer Email</Entry>
+        <Entry>Customer Telephone</Entry>
+	</TaskLabel>
+    <TaskLabel id="Event_0qckkbg" name="" type="revoke">
+		<Entry>Customer Address</Entry>
+		<Entry>Customer Name</Entry>
+		<Entry>Customer Email</Entry>
+        <Entry>Customer Telephone</Entry>
+	</TaskLabel>
+    <TaskLabel id="__0ef615c7-5456-45c8-9cfb-f1fe30c44436" name="Receive Credit Card Information" type="legal_grounds">
+        <Entry>Credit Card Information</Entry>
+    </TaskLabel>
+    <TaskData id="__a7183fc9-402a-418c-bf2a-3b1927d3798d" name="Take Payment">
+        <Entry>Credit Card Information</Entry>
+    </TaskData>
+	<TaskLabel id="__e6a9dd54-6cb0-4713-8b77-e659f2658e40" name="Share to Carrier Dock" type="share">
+		<Entry>Customer Address</Entry>
+        <Entry>Customer Telephone</Entry>
+	</TaskLabel>
+    <TaskLabel id="Event_07w2z61" name="Send Order" type="transfer">
+		<Entry>TRUE</Entry>
+	</TaskLabel>
+    <TaskLabel id="Event_07w2z61" name="Send Order" type="transfer">
+		<Entry>TRUE</Entry>
+	</TaskLabel>
+    <TaskData id="__f867d5f7-db1e-4015-9856-c53bc9cb4b51" name="Deliver Items">
+		<Entry>Customer Address</Entry>
+		<Entry>Customer Name</Entry>
+        <Entry>Customer Telephone</Entry>
+    </TaskData>
+</DataPoints>
