@@ -28,20 +28,18 @@ def run_nusmv_themis(bpmn_xml, task_data_xml):
 
 
 def get_test_cases():
-    tasks = [30]
-    task_variables = [30]
-    # tasks = [10,20,30,40,50]
-    # task_variables = [1, 10, 20, 30, 40, 50]
+    tasks = [10,20,30,40,50]
+    task_variables = [1, 10, 20, 30, 40, 50]
 
     test = []
     for no_tasks in tasks:
         for no_task_variables in task_variables:
             no_violations_case = ('No violations', 'examples/performance/performance-%d-tasks.bpmn' % no_tasks, 'examples/performance/performance-taskdata-%d-no-violations.xml' % no_task_variables, no_tasks, no_task_variables)
-            # with_violations_case = ('With violations', 'examples/performance/performance-%d-tasks.bpmn' % no_tasks,
-            #                           'examples/performance/performance-taskdata-%d-w-violations.xml' % no_task_variables,
-            #                           no_tasks, no_task_variables)
+            with_violations_case = ('With violations', 'examples/performance/performance-%d-tasks.bpmn' % no_tasks,
+                                      'examples/performance/performance-taskdata-%d-w-violations.xml' % no_task_variables,
+                                      no_tasks, no_task_variables)
             test.append(no_violations_case)
-            # test.append(with_violations_case)
+            test.append(with_violations_case)
     return test
 
 
@@ -62,7 +60,7 @@ def run():
         for (desc, bpmn, taskdata, no_of_tasks, no_of_variables) in test_cases:
             print('%s with %s tasks and %s task data variables:' % (desc, no_of_tasks, no_of_variables), file=f)
             print('%s with %s tasks and %s task data variables...' % (desc, no_of_tasks, no_of_variables))
-            cProfile.runctx('run_nusmv_themis(bpmn_xml=bpmn, task_data_xml=taskdata)', {'bpmn': bpmn, 'taskdata':taskdata, 'run_nusmv_themis': run_nusmv_themis}, {})
+            #cProfile.runctx('run_nusmv_themis(bpmn_xml=bpmn, task_data_xml=taskdata)', {'bpmn': bpmn, 'taskdata':taskdata, 'run_nusmv_themis': run_nusmv_themis}, {})
             result = time_themis(bpmn_xml=bpmn, task_data_xml=taskdata)
             print('Result: %s' % (result), file=f)
             print('%s,%s,%s,%s' % (desc, no_of_tasks, no_of_variables, result), file=f)
