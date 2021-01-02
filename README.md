@@ -35,9 +35,6 @@ python themis.py --bpmnxml bpmnmodel.bpmn --taskdataxml taskdata.xml
 ### Nobelprize
 ![Nobelprize BPMN diagram](examples/nobelprize/nobel-prize-multi-process.svg)
 
-### Order fulfillment
-![Order fulfillment BPMN diagram](examples/orderfulfillment/order_fulfillment.svg)
-
 ### Monthly Invoicing
 ![Monthly Invoicing BPMN diagram](examples/monthlyinvoicing/monthly_invoicing.svg)
 
