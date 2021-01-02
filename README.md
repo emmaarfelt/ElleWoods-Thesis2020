@@ -1,14 +1,14 @@
-# Themis
+# ElleWoods
 Fall 2020, IT University of Copenhagen
 
 ## Description
-Themis is an automated-tool tailored for GDPR compliance that can assist companies in their audit of existing business processes. Themis transforms any given BPMN diagram into a finite state machine and determine compliance with the GDPR. 
+ElleWoods is an automated-tool tailored for GDPR compliance that can assist companies in their audit of existing business processes. Themis transforms any given BPMN diagram into a finite state machine and determine compliance with the GDPR using model checking techniques. 
 
 ### Dependencies
-Themis is built with pytransitions: https://github.com/pytransitions/transitions, and PyNuSMV (https://pypi.org/project/pynusmv/)
+ElleWoods is built with pytransitions: https://github.com/pytransitions/transitions, and PyNuSMV (https://pypi.org/project/pynusmv/)
 
 ## Quick start 
-To run Themis, we must provide an BPMN model in .bpmn-format, and a XML-file data that specific task use. 
+To run ElleWoods, we must provide an BPMN model in .bpmn-format, and a XML-file data that specific task use. 
 
 ```shell
 python themis.py --bpmnxml bpmnmodel.bpmn --taskdataxml taskdata.xml
@@ -21,7 +21,8 @@ python themis.py --bpmnxml bpmnmodel.bpmn --taskdataxml taskdata.xml
 | `--taskdataxml` filepath | Path to *.xml-file matching tasks with data processing |
 | `--rename-states` | - |
 | `--compress-graph` | - |
-
+| `--show-paths` | - |
+| `--create-dot-graph` | - |
 
 
 ## Examples 
@@ -30,9 +31,6 @@ python themis.py --bpmnxml bpmnmodel.bpmn --taskdataxml taskdata.xml
 
 ### Pizza
 ![Pizza BPMN diagram](examples/pizza/order-pizza.svg)
-
-### Tasks
-![Task BPMN diagram](examples/tasks/tasks.svg)
 
 ### Nobelprize
 ![Nobelprize BPMN diagram](examples/nobelprize/nobel-prize-multi-process.svg)

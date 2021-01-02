@@ -10,21 +10,22 @@ from src.NuSMV import *
 from src.helpers.rename_helper import rename_states
 
 
-def main(bpmn_xml, task_data_xml, rename_flag_set=False, compress_flag_set=False, show_paths=False):
+def main(bpmn_xml, task_data_xml, rename_flag_set, compress_flag_set, show_paths, create_dot_graph):
     bpmn = parseXML_u(bpmn_xml, task_data_xml)
     ks = create_ks_from_model(bpmn, task_data_xml)
     if rename_flag_set:
         rename_states(ks)
     if compress_flag_set:
         create_compressed_graph(ks)
-    visual_graph = create_visual_graph_from_model(ks)
     model_name = pathlib.PurePath(bpmn_xml).name
-    visual_graph.draw_machine('lib/graphdiagrams/' + model_name + '.png')
+    if create_dot_graph:
+        visual_graph = create_visual_graph_from_model(ks)
+        visual_graph.draw_machine('lib/graphdiagrams/' + model_name + '.png')
     run_nusmv(model_name, ks, show_paths)
 
 if __name__ == "__main__":
     bpmnxml = taskdataxml = ''
-    rename_flag_set = compress_flag_set = show_paths = False
+    rename_flag_set = compress_flag_set = show_paths = create_dot_graph = False
 
     for i, arg in enumerate(sys.argv):
         if arg == '--bpmnxml':
@@ -37,6 +38,8 @@ if __name__ == "__main__":
             compress_flag_set = True
         if arg == '--show-paths':
             show_paths = True
+        if arg == '--create-dot-graph':
+            create_dot_graph = True
 
-    main(bpmnxml, taskdataxml, rename_flag_set, compress_flag_set, show_paths)
+    main(bpmnxml, taskdataxml, rename_flag_set, compress_flag_set, show_paths, create_dot_graph)
 
