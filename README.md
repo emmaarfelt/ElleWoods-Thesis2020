@@ -11,7 +11,7 @@ ElleWoods is built with pytransitions: https://github.com/pytransitions/transiti
 To run ElleWoods, we must provide an BPMN model in .bpmn-format, and a XML-file data that specific task use. 
 
 ```shell
-python themis.py --bpmnxml bpmnmodel.bpmn --taskdataxml taskdata.xml
+python ellewoods.py --bpmnxml bpmnmodel.bpmn --taskdataxml taskdata.xml
 ```
 
 ## Options
@@ -41,3 +41,13 @@ python themis.py --bpmnxml bpmnmodel.bpmn --taskdataxml taskdata.xml
 ### Hardware Retailer
 ![Hardware BPMN diagram](examples/hardwareretailer/hardware_retailer.svg)
 
+# How to run Ellewoods
+To run Ellewoods locally requires: Python 3.6.1, the `untangle`-package, `PyNuSMV`-package, and the `pathlib`-package. 
+We recommend installing a virtual environment with: 
+```
+python3 -m venv ellewoods
+python3 -m pip install --user ellewoods
+source ellewoods/bin/activate
+pip install untangle, PyNuSMV, pathlib
+python ellewoods.py --bpmnxml bpmnmodel.bpmn --taskdataxml taskdata.xml
+```  
