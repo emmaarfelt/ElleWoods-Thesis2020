@@ -29,7 +29,7 @@ def run_nusmv_themis(bpmn_xml, task_data_xml):
 
 def get_test_cases():
     tasks = [10,20,30,40,50]
-    task_variables = [1, 10, 20, 30, 40, 50]
+    task_variables = [1,10,20,30,40,50]
 
     test = []
     for no_tasks in tasks:
@@ -60,7 +60,7 @@ def run():
         for (desc, bpmn, taskdata, no_of_tasks, no_of_variables) in test_cases:
             print('%s with %s tasks and %s task data variables:' % (desc, no_of_tasks, no_of_variables), file=f)
             print('%s with %s tasks and %s task data variables...' % (desc, no_of_tasks, no_of_variables))
-            #cProfile.runctx('run_nusmv_themis(bpmn_xml=bpmn, task_data_xml=taskdata)', {'bpmn': bpmn, 'taskdata':taskdata, 'run_nusmv_themis': run_nusmv_themis}, {})
+            # cProfile.runctx('run_nusmv_themis(bpmn_xml=bpmn, task_data_xml=taskdata)', {'bpmn': bpmn, 'taskdata':taskdata, 'run_nusmv_themis': run_nusmv_themis}, {})
             result = time_themis(bpmn_xml=bpmn, task_data_xml=taskdata)
             print('Result: %s' % (result), file=f)
             print('%s,%s,%s,%s' % (desc, no_of_tasks, no_of_variables, result), file=f)
